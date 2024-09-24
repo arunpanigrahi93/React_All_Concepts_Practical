@@ -1,4 +1,4 @@
-import React, { useState, memo } from "react";
+import React, { useState, memo, useCallback } from "react";
 import Child from "./Child";
 
 function Parent() {
@@ -15,12 +15,17 @@ function Parent() {
     setValue(e.target.value);
     console.log("Parent called");
   };
+
+  const incrementHandler = useCallback(() => {
+    setCounter((prev) => prev + 1);
+  }, [counter]);
+
   return (
     <div>
       <h1>Parent</h1>
       <button onClick={handleInc}>Count</button> {counter}
       <input type="text" value={value} onChange={handleChange} />
-      <Child count={counter} />
+      <Child count={counter} onClick={incrementHandler} />
     </div>
   );
 }
