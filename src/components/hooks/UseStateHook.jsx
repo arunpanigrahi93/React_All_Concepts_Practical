@@ -7,7 +7,9 @@ function UseStateHook() {
     setCount((prev) => prev + 1);
   };
   const handleDecrement = () => {
-    setCount((prev) => prev - 1);
+    if (count > 0) {
+      setCount((prev) => prev - 1);
+    }
   };
 
   return (
