@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 const Child = ({ count, onClick }) => {
   console.log("Child called");
+
   return (
     <div>
       <h2>Child {count}</h2>
