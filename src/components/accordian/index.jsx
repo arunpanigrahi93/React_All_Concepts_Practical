@@ -1,33 +1,25 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import data from "./data";
 
-function Accordion() {
-  const [show, setShow] = useState(null);
-  const [desc, setDesc] = useState(null);
+export default function Accordian() {
+  const [selected, setSelected] = useState(null);
 
-  const showHandler = (id) => {
-    const newData = data.filter((item) => id === item.id);
-    setShow(id === show ? null : id);
-    setDesc(newData);
-
-    console.log("Accordion clicked");
-  };
+  function handleSingleSelection(getItemId) {
+    console.log(getItemId);
+  }
 
   return (
     <div>
-      <ul>
-        {data.map((item) => (
-          <div key={item.id}>
-            <li>
-              <h2>{item.question}</h2>
-              <button onClick={() => showHandler(item.id)}>+</button>
-              {show === item.id && <p>{item.answer}</p>}
-            </li>
+      {data && data.length > 0 ? (
+        data.map((item) => (
+          <div key={item.id} onClick={() => handleSingleSelection(item.id)}>
+            <h2>{item.question}</h2>
+            <span>+</span>
           </div>
-        ))}
-      </ul>
+        ))
+      ) : (
+        <div>No data present</div>
+      )}
     </div>
   );
 }
-
-export default Accordion;
