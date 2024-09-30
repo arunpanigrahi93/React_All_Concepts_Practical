@@ -27,35 +27,32 @@ export default function Accordian() {
 
   console.log(selected, multiple);
   return (
-    <div className="acc-wrapper">
+    <div>
       <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
         Enable Multi Selection
       </button>
-      <div className="accordian">
+      <div>
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div className="item">
+            <div>
               <div
                 onClick={
                   enableMultiSelection
                     ? () => handleMultiSelection(dataItem.id)
                     : () => handleSingleSelection(dataItem.id)
                 }
-                className="title"
               >
                 <h3>{dataItem.question}</h3>
                 <span>+</span>
               </div>
               {enableMultiSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
-                    <div className="acc-content ">{dataItem.answer}</div>
+                    <div>{dataItem.answer}</div>
                   )
-                : selected === dataItem.id && (
-                    <div className="acc-content ">{dataItem.answer}</div>
-                  )}
+                : selected === dataItem.id && <div>{dataItem.answer}</div>}
               {/* {selected === dataItem.id ||
               multiple.indexOf(dataItem.id) !== -1 ? (
-                <div className="content">{dataItem.answer}</div>
+                <div>{dataItem.answer}</div>
               ) : null} */}
             </div>
           ))
