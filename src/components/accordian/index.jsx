@@ -34,7 +34,7 @@ export default function Accordian() {
       <div>
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div>
+            <div key={dataItem.id}>
               <div
                 onClick={
                   enableMultiSelection
