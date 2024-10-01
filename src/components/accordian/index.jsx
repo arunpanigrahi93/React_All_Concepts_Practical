@@ -18,7 +18,7 @@ export default function Accordian() {
     let cpyMutiple = [...multiple];
     const findIndexOfCurrentId = cpyMutiple.indexOf(getCurrentId);
 
-    console.log(findIndexOfCurrentId);
+    //   console.log(findIndexOfCurrentId);
     if (findIndexOfCurrentId === -1) cpyMutiple.push(getCurrentId);
     else cpyMutiple.splice(findIndexOfCurrentId, 1);
 
