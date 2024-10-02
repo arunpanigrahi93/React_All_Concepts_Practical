@@ -33,23 +33,21 @@ export default function Accordian() {
       </button>
       <div>
         {data && data.length > 0 ? (
-          data.map((dataItem) => (
-            <div key={dataItem.id}>
+          data.map((Item) => (
+            <div key={Item.id}>
               <div
                 onClick={
                   enableMultiSelection
-                    ? () => handleMultiSelection(dataItem.id)
-                    : () => handleSingleSelection(dataItem.id)
+                    ? () => handleMultiSelection(Item.id)
+                    : () => handleSingleSelection(Item.id)
                 }
               >
-                <h3>{dataItem.question}</h3>
+                <h3>{Item.question}</h3>
                 <span>+</span>
               </div>
               {enableMultiSelection
-                ? multiple.indexOf(dataItem.id) !== -1 && (
-                    <div>{dataItem.answer}</div>
-                  )
-                : selected === dataItem.id && <div>{dataItem.answer}</div>}
+                ? multiple.indexOf(Item.id) !== -1 && <div>{Item.answer}</div>
+                : selected === Item.id && <div>{Item.answer}</div>}
               {/* {selected === dataItem.id ||
               multiple.indexOf(dataItem.id) !== -1 ? (
                 <div>{dataItem.answer}</div>
