@@ -1,4 +1,18 @@
+// #456789
+// rgb(25,45,67)
+
+import { useState } from "react";
+
 function RandomColor() {
-  return <div>Random clr</div>;
+  const [typeOfColor, setTypeOfColor] = useState("hex");
+  const [color, setColor] = useState("#000000");
+
+  return (
+    <div style={{ width: "100vw", height: "100vh", background: color }}>
+      <button>Create HEX Color</button>
+      <button>Create RGB Color</button>
+      <button>Generate Random Color</button>
+    </div>
+  );
 }
 export default RandomColor;
