@@ -4,6 +4,7 @@ import UseEffectHook from "./components/hooks/UseEffectHook";
 import Parent from "./components/hooks/MemoCallbackUseMemo/Parent";
 import Portal from "./components/hooks/Portal.jsx";
 import Accordion from "./components/accordian/index.jsx";
+import RandomColor from "./components/Random-color/index.jsx";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <UseEffectHook /> */}
       {/* <Parent /> */}
       {/* <Portal /> */}
-      <Accordion />
+      {/* <Accordion /> */}
+      <RandomColor />
     </div>
   );
 }
