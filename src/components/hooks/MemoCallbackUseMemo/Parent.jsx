@@ -1,4 +1,4 @@
-import React, { useState, memo, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Child from "./Child";
 
 function Parent() {
