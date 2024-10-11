@@ -13,7 +13,7 @@ function App() {
       <UseEffectHook /> */}
       {/* <Parent /> */}
       {/* <Portal /> */}
-      {/* <Accordion /> */}
+      <Accordion />
       <RandomColor />
     </div>
   );
