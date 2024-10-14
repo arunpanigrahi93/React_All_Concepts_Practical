@@ -12,7 +12,7 @@ function App() {
       {/* <UseStateHook />
       <UseEffectHook /> */}
       {/* <Parent /> */}
-      <Portal />
+      {/* <Portal /> */}
       {/* <Accordion /> */}
       <RandomColor />
     </div>
