@@ -9,8 +9,8 @@ import RandomColor from "./components/Random-color/index.jsx";
 function App() {
   return (
     <div>
-      <UseStateHook />
-      <UseEffectHook />
+      {/* <UseStateHook />
+      <UseEffectHook /> */}
       {/* <Parent /> */}
       {/* <Portal /> */}
       {/* <Accordion /> */}
