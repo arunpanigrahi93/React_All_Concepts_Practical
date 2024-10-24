@@ -11,7 +11,7 @@ function App() {
     <div>
       {/* <UseStateHook />
       <UseEffectHook /> */}
-      {/* <Parent /> */}
+      <Parent />
       {/* <Portal /> */}
       {/* <Accordion /> */}
       <RandomColor />
