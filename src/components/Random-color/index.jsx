@@ -27,10 +27,10 @@ export default function RandomColor() {
     setColor(`rgb(${r},${g}, ${b})`);
   }
 
-  // useEffect(() => {
-  //   if (typeOfColor === "rgb") handleCreateRandomRgbColor();
-  //   else handleCreateRandomHexColor();
-  // }, [typeOfColor]);
+  useEffect(() => {
+    if (typeOfColor === "rgb") handleCreateRandomRgbColor();
+    else handleCreateRandomHexColor();
+  }, [typeOfColor]);
 
   return (
     <div
