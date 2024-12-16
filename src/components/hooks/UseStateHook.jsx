@@ -16,7 +16,7 @@ function UseStateHook() {
     <div>
       <h2>Counter</h2>
       <button onClick={handleIncrement}>Increment</button>
-      {count}
+      {/* {count} */}
       <button onClick={handleDecrement}>Decrement</button>
     </div>
   );
